@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/snow/snow"
+    
+  ],
+  "sitemapLocation": "sitemap.json",
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "动画",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "",
+      "iconPath": "/images/rain2.png",
+      "selectedIconPath": "/images/rain5.png"
+    },
+    {
+      "pagePath": "pages/snow/snow",
+      "text": "",
+      "iconPath": "/images/icon3.png",
+      "selectedIconPath": "/images/icon3.png"
+    }]
+  }
+}

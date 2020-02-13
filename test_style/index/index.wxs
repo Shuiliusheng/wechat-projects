@@ -1,0 +1,8 @@
+function toFloat(t1,t2) {
+  var value = (t1 / t2) * 100
+  return value.toFixed(2)
+}
+
+module.exports = {
+  toFloat: toFloat
+};

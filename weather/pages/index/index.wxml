@@ -1,0 +1,54 @@
+<view class='container'>
+  <!-- first range -->
+  <!-- picker: 顶部弹起的滚动选择器组件，根据mode不同，选择的内容不同（共五种） -->
+  <picker mode='region' bindchange="changePlace" style="font-size:40rpx;font-weight:bold">  
+    <view>{{place}}</view>
+  </picker>
+  <!-- second range -->
+  <text class='date'>{{date}} </text>
+  <text class='info' wx:if="{{nowTime}}">{{now.tmp}} ℃ {{now.cond_txt}} </text>
+  <text class='info_forecast' wx:if="{{forecastTime}}">{{forecast.tmp_min}} - {{forecast.tmp_max}} ℃</text>
+
+  <!-- third range -->
+  <image wx:if="{{nowTime}}" src='/images/{{now.cond_code}}.png' class='img'></image>
+
+  <view class="forecastImg" wx:if="{{forecastTime}}">
+    <view class="forecastBar">
+      <image src='/images/{{forecast.cond_code_d}}.png' class='img'></image>
+      <image src='/images/{{forecast.cond_code_n}}.png' class='img'></image>
+    </view>
+    <view class="forecastBar">
+      <text class='info_forecast'> {{forecast.cond_txt_d}}(白天) </text>
+      <text class='info_forecast'> {{forecast.cond_txt_n}}(夜晚) </text>
+    </view>
+  </view>
+
+  <!-- forth rage -->
+  <view class='detail'>
+    <view class='bar' style="font-weight:bold">
+      <view class='box'>湿度</view>
+      <view class='box'>气压</view>
+      <view class='box'>能见度</view>
+    </view>
+    <view class='bar'>
+      <view class='box'>{{now.hum}} %</view>
+      <view class='box'>{{now.pres}} hPa</view>
+      <view class='box'>{{now.vis}} Km</view>
+    </view>
+    <view class='bar' style="font-weight:bold">
+      <view class='box'>风向</view>
+      <view class='box'>风速</view>
+      <view class='box'>风力</view>
+    </view>
+    <view class='bar'>
+      <view class='box'>{{now.wind_dir}}</view>
+      <view class='box'>{{now.wind_spd}} Km/h</view>
+      <view class='box'>{{now.wind_sc}} 级</view>
+    </view>
+  </view>
+  <view class='btn'>
+    <button class='btn1' bindtap="lastDay">前一天</button>
+    <button class='btn1' bindtap="nowDay">当前天气</button>
+    <button class='btn1' bindtap="nextDay">后一天</button>
+  </view>  
+</view>

@@ -1,0 +1,8 @@
+<view>
+  <stopwatch id="stopwatch" class="stopwatch" text="{{over}}">
+    <view slot="first"> -- </view>
+    <view slot="second"> -- </view>
+  </stopwatch>
+  <button class="btn" wx:if="{{!started}}" bindtap="start">开始</button>
+  <button class="btn" wx:if="{{started}}" bindtap="stop">停止</button>
+</view>

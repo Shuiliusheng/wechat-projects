@@ -1,0 +1,10 @@
+<wxs src="./index.wxs" module="habit" />
+<view class="intro">
+ <view class="box" >
+    <view class="item">
+      <view class="progress-item" style="width:{{habit.toFloat(habitCalendar.actual,habitCalendar.plan)}}%"></view>
+    </view>
+    <text>{{habit.toFloat(habitCalendar.actual,habitCalendar.plan)}}%</text>
+  </view>
+</view>
+<button bindtap='add'>增加进度条</button> 

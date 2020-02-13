@@ -1,0 +1,23 @@
+.show_pics{
+  display:flex;
+  flex-direction: row;
+  width: 720rpx;
+  flex-wrap:wrap;
+  align-content: flex-start;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+.pic_block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img_example{
+  width: 178rpx;
+  height: 178rpx;
+  margin: 1rpx;
+}
+text{
+  text-transform:capitalize;
+  font-family:"Times New Roman",Times,serif;
+}

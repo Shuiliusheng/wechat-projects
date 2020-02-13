@@ -1,0 +1,18 @@
+/* pages/index/index.wxss */
+video{
+  width:100%;
+}
+.inputArea{
+  display:flex;
+  flex-direction: row;
+}
+.input1{
+  flex-grow: 1; /* 扩展多余空间*/
+  border: 1rpx solid black;
+  height: 100rpx;
+}
+.btn1{
+  height: 100rpx;
+  background: black;
+  color:white;
+}

@@ -1,0 +1,6 @@
+<!--pages/index/index.wxml-->
+<text>点击查看下面的DEMO：</text>
+<navigator style='display:block;line-height:40px;color:blue;' url='../movable/movable'>movable</navigator>
+<navigator style='display:block;line-height:40px;color:blue;' url='../sidebar/sidebar'>右滑显示左侧侧边栏</navigator>
+<navigator style='display:block;line-height:40px;color:blue;' url='../stick-top/stick-top'>滚动菜单栏贴顶</navigator>
+<navigator style='display:block;line-height:40px;color:blue;' url='../nearby/nearby'>跟随swiper的图片切换效果</navigator>

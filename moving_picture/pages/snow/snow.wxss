@@ -1,0 +1,19 @@
+/* pages/index/index.wxss */
+.show{
+  background-color:black;
+  width: 100%;
+  height: 100vh;
+}
+.show canvas{
+  width: 100%;
+  height: 90vh;
+}
+.control{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 10vh;
+}
+.control button{
+  width: 200rpx;
+}

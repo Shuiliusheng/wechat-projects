@@ -1,0 +1,8 @@
+<!-- first range -->
+<video id='myVideo' controls src='{{src}}'></video>
+
+<!-- second range -->
+<view class="inputArea">
+  <input class="input1" maxlength="-1" placeholder="输入视频地址" bindinput="getUrl"> </input>
+  <button class="btn1" bindtap="playVideo">播放</button>
+</view>

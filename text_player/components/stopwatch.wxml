@@ -1,0 +1,22 @@
+<wxs module="cal">
+function toFloat(t1,t2) {
+  var value = (t1 / t2) * 100
+  return value.toFixed(2)
+}
+module.exports.toFloat = toFloat;
+</wxs>
+
+<slot name="first"></slot>
+<view class="text" style="font-size:{{size}}px">  {{text}} </view>
+<slot name="second"></slot>
+<view class="item">
+  <view class="progress-item" style="width:{{cal.toFloat(now,max)}}%"></view> 
+</view>
+<view class="btn1">
+<button  bindtap="faster" style="width:120px;text-align:center;vertical-align:middle;float: left;">faster</button>
+<button  bindtap="slower" style="width:120px">slower</button>
+</view>
+<view class="btn1">
+<button  bindtap="text_bigger" style="width:120px;text-align:center;vertical-align:middle;float: left;">bigger</button>
+<button  bindtap="text_smaller" style="width:120px">smaller</button>
+</view>

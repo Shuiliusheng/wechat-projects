@@ -1,0 +1,10 @@
+<!--pages/show/show.wxml-->
+<view class="showPic">
+  <text class="title">{{pic.type}}</text>
+  <image class="pic" src="{{pic.url}}" mode='widthFix' bindtap="showDetail" bindlongtap="saveImg"></image>
+  <button wx:if="{{isCollect}}" bindtap="discollect">♥已收藏</button>
+  <button wx:else bindtap="collect">♥未收藏</button>
+</view>
+<view class="urlInfo" wx:if="{{showUrl}}">
+  <text selectable='true' bindtap="copyUrl">来源:\n {{pic.url}}</text>
+</view>

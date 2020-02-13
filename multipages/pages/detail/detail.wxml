@@ -1,0 +1,9 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail">
+  <text class="title">{{type}}</text>
+  <view class="show_pics">
+    <view class="pic_block" wx:for="{{pictures}}" wx:key="id">
+      <image class="img_example" src="{{item.url}}" data-id="{{item.id}}" bindtap="showImg"></image>
+    </view>
+  </view>
+</view>

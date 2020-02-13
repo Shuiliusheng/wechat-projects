@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo1">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <!-- open-type=getUserInfo 表示激活获取微信用户信息功能 -->
+    <!-- bindgetuserinfo=get 表示获得的数据将传递给自定义函数get -->
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto" style="font-size:{{size}}px">{{motto}}</text>
+  </view>
+  <button class="btn1" bindtap='add_size'>add size</button> 
+</view>

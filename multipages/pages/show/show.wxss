@@ -1,0 +1,33 @@
+/* pages/show/show.wxss */
+.showPic{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  border-bottom: 2rpx;
+  border-bottom-style:solid;
+  border-bottom-color:gainsboro;
+}
+.pic{
+  width:100%;
+  /* min-width:750rpx;  */
+}
+.title{
+  font-size:60rpx;
+  width:100%;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+  color: rgb(252, 169, 62);
+  border-bottom: 2rpx;
+  border-bottom-style:solid;
+  border-bottom-color:gainsboro;
+}
+.urlInfo{
+  height: 100rpx;
+  margin: 10rpx;
+}
+.urlInfo text{
+  text-transform:none;
+}

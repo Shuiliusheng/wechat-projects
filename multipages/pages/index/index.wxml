@@ -1,0 +1,20 @@
+<view class="index">
+  <swiper indicator-dots="true" autoplay="true">
+    <block wx:for="{{background}}" wx:key="id">
+      <swiper-item>
+        <image src="{{item.url}}" data-type="{{item.type}}" bindtap="showDetail"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="list_title">
+    <text>已有类型:</text>
+  </view>
+
+  <view class="list">
+    <view class="bar" wx:for="{{background}}" wx:key="id" bindtap="showDetail" data-type="{{item.type}}">
+      <image src="{{item.url}}"></image>
+      <text>{{item.type}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/own/own",
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/show/show"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#af3f1f",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Background",
+    "backgroundColor": "#af3f1f",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "/images/index1.png",
+        "selectedIconPath": "/images/index2.png"
+      },
+      {
+        "pagePath": "pages/own/own",
+        "text": "",
+        "iconPath": "/images/my1.png",
+        "selectedIconPath": "/images/my2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

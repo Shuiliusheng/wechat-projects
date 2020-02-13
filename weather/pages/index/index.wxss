@@ -1,0 +1,61 @@
+/* pages/index/index.wxss */
+.container{
+  display:flex;
+  flex-direction: column;
+  height:100vh;
+  align-items: center;
+  justify-content: space-around; /*分散，不顶补*/
+}
+.forecastImg{
+  display:flex;
+  flex-direction: column;
+  width:750rpx;
+  justify-content: space-around;
+}
+.forecastBar{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.detail{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+}
+.bar{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 0;
+}
+.box{
+  width: 33.3%;
+  text-align: center;
+}
+.btn{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.btn1{
+  margin: 20rpx;
+}
+.info{
+  font-size:80rpx;
+  color:aqua ;
+}
+.info_forecast{
+  font-size:50rpx;
+  color:aqua;
+  text-align: center;
+  width:375rpx;
+  /* margin:0 75rpx; col row */
+}
+.date{
+  font-size:40rpx;
+  color:aqua ;
+}
+.img{
+  width:300rpx;
+  height: 300rpx;
+}
+

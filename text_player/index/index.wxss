@@ -1,0 +1,10 @@
+.stopwatch {
+  font-family: monospace;
+  font-size: 48px;
+  text-align: center;
+  display: block;
+  margin: 60rpx;
+}
+.btn {
+  margin: 60rpx;
+}

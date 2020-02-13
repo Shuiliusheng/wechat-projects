@@ -1,0 +1,12 @@
+<!--pages/index/index.wxml-->
+<view class="show">
+  <canvas canvas-id="canvas1"></canvas>
+  
+  <view class="control">
+    <button wx:if="{{flag}}" bindtap="startPlay">开始</button>
+    <button wx:else bindtap="stopPlay">结束</button>
+    <button bindtap="rainMore">更多</button>
+    <button bindtap="slowdown">减速</button>
+    <button bindtap="speedup">加速</button>
+  </view>
+</view>
