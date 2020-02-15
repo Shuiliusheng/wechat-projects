@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/client/client",
+    "pages/server/server"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "wechat",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/client/client",
+        "text": "Client",
+        "iconPath": "/images/client2.png",
+        "selectedIconPath": "/images/client1.png"
+      },
+      {
+      "pagePath": "pages/server/server",
+      "text": "Server",
+      "iconPath": "/images/server2.png",
+      "selectedIconPath": "/images/server1.png"
+    }]
+  }
+}

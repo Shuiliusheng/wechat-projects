@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="control">
+
+    <view class="inputArea" wx:if="{{!isOpen}}">
+      <input placeholder="Username" maxlength="20" auto-focus bindinput="inputUsername"></input>
+      <input placeholder="Server IP" maxlength="20" type="digit" bindinput="inputIP"></input>
+      <input placeholder="Server Port" maxlength="20" type="number" bindinput="inputPort"></input>
+    </view>
+
+    <button wx:if="{{!isOpen}}" class="openBtn" bindtap="open_udp">Open</button>
+    <button wx:else bindtap="close_udp">Close</button>
+    <button wx:if="{{isOpen}}" bindtap="sendMess">Send</button>
+  </view>
+
+  <view class="inputBar" wx:if="{{isOpen}}">
+    <text> >>> </text>
+    <input placeholder="请输入" maxlength="1000" auto-focus bindinput="inputData" bindconfirm="inputOver" value='{{inputValue}}'></input>
+  </view>
+
+   <!--  接受消息的显示块  -->
+  <view wx:if="{{isOpen}}" class="messageBox">
+    <view  class="messageItem" wx:for="{{messages}}" wx:key="id">
+      
+      <view class="leftInfo" wx:if="{{item.username != username }}">
+        <text class="dateInfo"> {{item.date}} </text>
+        <text class="userInfo"> {{item.username}} </text>
+      </view>
+      <view class="messInfo" wx:if="{{item.username != username }}">
+        <text selectable> {{item.message}} </text>
+      </view>
+
+      <view  class="messInfo1" wx:if="{{item.username == username }}">
+        <text selectable> {{item.message}} </text>
+      </view>
+      <view class="leftInfo1" wx:if="{{item.username == username }}">
+        <text class="dateInfo"> {{item.date}} </text>
+        <text class="userInfo"> {{item.username}} </text>
+      </view>
+
+    </view>
+  </view>
+
+  <!--  消息显示的控制按钮 -->
+  <view class="controlShow" wx:if="{{isOpen && messages.length >= 5}}" >
+    <button bindtap="clearMessages">清空</button>
+    <button bindtap="lastMessages"> {{left}} </button>
+    <button bindtap="nextMessages"> >> </button>
+    <button bindtap="newMessages">最新</button>
+  </view>
+
+  <!-- <text>{{test}}</text> -->
+</view>
