@@ -1,0 +1,158 @@
+/**index.wxss**/
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+}
+
+.control{
+  display: flex;
+  flex-direction: row;
+  margin: 10rpx;
+  width:100%;
+  /* height: 250rpx; */
+  border-bottom: 2rpx solid bisque;
+}
+
+.inputArea{
+  display: flex;
+  flex-direction: column;
+}
+
+.control input{
+  widows: 70%;
+  font-size: 40rpx;
+  text-align: center;
+  height: 80rpx;
+  border-bottom: 1rpx dotted black;
+}
+.control .openBtn{
+  width:30%;
+  height: 80rpx;
+  margin-top: 80rpx;
+}
+
+
+.inputBar{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height:70rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 2rpx dotted grey;
+}
+
+.inputBar input{
+  font-size: 35rpx;
+  width: 650rpx;
+  height: 60rpx;
+}
+
+.messageBox{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  width: 100%;
+}
+
+.messageItem {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 1rpx;
+  border-bottom: 1rpx solid gray;
+  justify-content: space-around;
+}
+.messageItem text{
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+}
+.leftInfo{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border-right: 2rpx dotted rgb(55, 57, 197);
+  background-color: rgb(190, 224, 198);
+  border-radius:5px !important;
+}
+
+.leftInfo1{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border-right: 2rpx dotted rgb(55, 57, 197);
+  background-color: rgb(219, 159, 201);
+  border-radius:5px !important;
+}
+
+.dateInfo{
+  font-size: 20rpx;
+  border-bottom: 2rpx dotted rgb(55, 57, 197);
+  margin-left: 5rpx;
+  margin-top: 5rpx;
+}
+.userInfo{
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.messInfo{
+  width: 70%;
+  background-color: rgb(200, 199, 201);
+  border-radius:5px !important;
+}
+
+.messInfo text{
+  font-size: 30rpx;
+  margin-left: 5rpx;
+  margin-top: 5rpx;
+}
+
+.messInfo1{
+  width: 70%;
+  background-color: rgb(219, 231, 208);
+  border-radius:5px !important;
+}
+
+.messInfo1 text{
+  font-size: 30rpx;
+  text-align: right;
+  margin-left: 5rpx;
+  margin-top: 5rpx;
+}
+
+.controlShow{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+  width:100%;
+}
+
+.controlShow button{
+  width: 25%;
+  margin-right: 4rpx;
+}
+
+
+.showProgress{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  margin: 10rpx;
+  border-bottom: 2rpx dotted rgb(55, 57, 197);
+}
+
+.messInfo image{
+  width: 80rpx;
+  margin-left: 5rpx;
+  margin-top: 5rpx;
+}
+
+.messInfo1 image{
+  width: 80rpx;
+  margin-left: 5rpx;
+  margin-top: 5rpx;
+}

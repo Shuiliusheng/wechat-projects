@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/server/server",
+    "pages/client/client",
+    "pages/showImage/showImage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/client/client",
+        "text": "Client",
+        "iconPath": "/images/client2.png",
+        "selectedIconPath": "/images/client1.png"
+      },
+      {
+        "pagePath": "pages/server/server",
+        "text": "Server",
+        "iconPath": "/images/server2.png",
+        "selectedIconPath": "/images/server1.png"
+      }
+    ]
+  }
+}

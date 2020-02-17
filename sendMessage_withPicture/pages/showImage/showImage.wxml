@@ -1,0 +1,4 @@
+<!--pages/showImage/showImage.wxml-->
+
+<image src="{{url}}" bindlongtap="saveImage" mode='widthFix'> </image>
+<text style="font-size:45rpx;">{{info}}</text>
