@@ -1,0 +1,14 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+
+  <button wx:if="{{!isOpen}}" bindtap="openUDP"> OpenUDP </button>
+  <view class="control" wx:else>
+    <button bindtap="closeUDP"> CloseUDP </button>
+    <button bindtap="sendFile" wx:if="{{chooseOver}}"> SendFile </button>
+    <button bindtap="chooseImage" wx:else> chooseImage </button>
+    <image src="{{image}}" mode='widthFix' bindlongtap="saveShowedImage"></image>
+    <progress  percent="{{recvPer}}" show-info="true" ></progress>
+  </view>
+
+  <text>{{info}}  \n {{info1}}\n {{info2}}\n {{info3}} \n Recv: {{recvPer}}%</text>
+</view>
