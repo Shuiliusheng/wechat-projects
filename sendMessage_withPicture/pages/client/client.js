@@ -13,6 +13,7 @@ var inputValue = "";
 
 ///changed
 
+var progressInfo = [];
 var imageInfo = {};
 var filenumber = 0;
 
@@ -24,6 +25,7 @@ Page({
   data: {
     filename: "",
     recvPer: 0,
+    progressInfo: [],
     isChosed: false,
     str: "",
     left: "<<",
@@ -31,6 +33,39 @@ Page({
     isOpen: false,
     username: username,
     inputValue: "",
+  },
+
+  //当文件发送完成后，删除该进度信息
+  deleteProgressInfo: function (filename) {
+    for (var i = 0; i < progressInfo.length; i++) {
+      if (progressInfo[i].filename == filename) {
+        progressInfo.splice(i, 1);
+        break;
+      }
+    }
+    this.setData({
+      progressInfo: progressInfo
+    })
+  },
+
+  //更新发送文件的进度信息
+  updateProgressInfo: function (filename, percent) {
+    let i = 0;
+    for (i = 0; i < progressInfo.length; i++) {
+      if (progressInfo[i].filename == filename) {
+        progressInfo[i].percent = percent;
+        break;
+      }
+    }
+    if (progressInfo.length == i) {
+      let info = {};
+      info.filename = filename;
+      info.percent = percent;
+      progressInfo.push(info);
+    }
+    this.setData({
+      progressInfo: progressInfo
+    })
   },
 
   showImageDetail: function (e) {
@@ -130,7 +165,7 @@ Page({
 
     fileManage.writeFile({
       filePath: wx.env.USER_DATA_PATH + "/" + dstfilename,
-      // filePath:   "/images/" + dstfilename,
+      // filePath: "/images/" + dstfilename,
       data: filedata.buffer,
 
       success: function () {
@@ -258,10 +293,7 @@ Page({
       // console.log("fileCompleteAck: ", back.info.username);
       console.log("send file successfully: ", back.info.filename, back.info.ip, back.info.port);
       common_sendFile.clearFileData(back.info);
-      // this.setData({
-      //   filename: "",
-      //   isChosed: false
-      // });
+      this.deleteProgressInfo(back.info.filename);
     }
     else {
       console.log("recv Mess type is wrong: ", back.type)
@@ -317,10 +349,7 @@ Page({
         port: port,
         message: data
       })
-      this.setData({
-        filename: filename,
-        recvPer: 0
-      });
+      this.updateProgressInfo(filename, 0);
       console.log("send file: ", filename, ip, port);
     }
     else {
@@ -337,9 +366,7 @@ Page({
         length: message.dataArr.byteLength
       });
 
-      this.setData({
-        recvPer: message.percent
-      });
+      this.updateProgressInfo(filename, message.percent);
     }
   },
 

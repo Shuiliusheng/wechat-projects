@@ -21,9 +21,9 @@
   </view>
 
   <!-- progress -->
-  <view class="showProgress" wx:if="{{filename.length!=0}}">
-    <text>{{filename}}</text>
-    <progress percent="{{recvPer}}" show-info="true" ></progress>
+  <view class="showProgress" wx:for="{{progressInfo}}" wx:key="percent">
+      <text >{{item.filename}}</text>
+      <progress percent="{{item.percent}}" show-info="true" ></progress>
   </view>
 
 
